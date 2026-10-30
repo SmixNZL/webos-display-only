@@ -1,0 +1,25 @@
+# All device state stays outside public source and Git history.
+.private/
+work/
+outputs/
+backups/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.ipk
+*.tgz
+*.tar
+*.gz
+*.jpg
+*.jpeg
+*.png
+*.sl
+*.log
+*_results.json
+*pairing*.json
+*known_hosts*

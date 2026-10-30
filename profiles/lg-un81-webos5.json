@@ -1,0 +1,160 @@
+{
+  "id": "lg-un81-webos5",
+  "identity": {
+    "modelName": "65UN8160PVA",
+    "firmwareVersion": "04.63.25",
+    "sdkVersion": "5.6.1"
+  },
+  "testedDate": "2026-10-30",
+  "qml": [
+    {
+      "relativePath": "Interfaces/ConnectionsInterfaces/ConnectionsInterfaces.qml",
+      "target": "/usr/palm/applications/com.webos.app.fullhome/qml/Interfaces/ConnectionsInterfaces/ConnectionsInterfaces.qml",
+      "originalSha256": "a9c18d58f503e495c2a506e0f7be44aaf91a14e3baf3192d56ba35f9ea96f0ac",
+      "modifiedSha256": "7ae8fda163b29240ad8eb4baf46e94bd58d161e5cb7085bcda142b52f7d36f32"
+    },
+    {
+      "relativePath": "UserInterfaceLayer/Containers/Main/TopShelf.qml",
+      "target": "/usr/palm/applications/com.webos.app.fullhome/qml/UserInterfaceLayer/Containers/Main/TopShelf.qml",
+      "originalSha256": "34b95ce5843874b066ea8e175f6b7045106c50b77b7804f311125fcc42f1c554",
+      "modifiedSha256": "05925720dcdf1594e72ace43a0519847694c2dae00844a7032090ab5ea7d6d5b"
+    },
+    {
+      "relativePath": "Model/ShelfList.js",
+      "target": "/usr/palm/applications/com.webos.app.fullhome/qml/Model/ShelfList.js",
+      "originalSha256": "0d0eda10ff0388a28e25eaa9ed58d1f7945f8b39e4bca8533c681601dd143a02",
+      "modifiedSha256": "ad8d6dfd7ce416de3cc93a4dccd277b1488dcb95ab42dc68e4e78dd767e6546b"
+    }
+  ],
+  "startupHashes": {
+    "/etc/systemd/system/connman.service": "76ab6f6dd6caade198979779a00a2dd3480d2dec18a0ddaf185f78d1309efbc1",
+    "/etc/systemd/system/scripts/connman.sh": "40c419465167c15ad7b620155e69fcb773551356313b373923aca23ed940f724"
+  },
+  "units": [
+    "contentminer",
+    "nudge",
+    "rdxd",
+    "crashreportd",
+    "remotelogger",
+    "uploadd",
+    "voiceconductor",
+    "voiceinput",
+    "airplay-adaptor",
+    "miracast",
+    "dmr",
+    "iot-client",
+    "livepick",
+    "update"
+  ],
+  "dynamicBinaries": [
+    "airplay",
+    "homekit",
+    "amazon-alexa-adapter",
+    "amazon-alexa-vsk",
+    "performer",
+    "lg.thinqai.adapter",
+    "google-assistant-adapter",
+    "nlpmanager",
+    "sportsalarm",
+    "livepick",
+    "uploadd",
+    "admanager",
+    "adoverlay-service",
+    "iot-client",
+    "mqtt-client",
+    "ocf-onboarding",
+    "update"
+  ],
+  "processBinaries": [
+    "airplay",
+    "homekit",
+    "amazon-alexa-adapter",
+    "amazon-alexa-vsk",
+    "performer",
+    "lg.thinqai.adapter",
+    "google-assistant-adapter",
+    "nlpmanager",
+    "sportsalarm",
+    "livepick",
+    "uploadd",
+    "contentminer",
+    "nudge",
+    "rdxd",
+    "voiceconductor",
+    "voiceinput",
+    "remotelogger",
+    "admanager",
+    "adoverlay-service",
+    "iot-client",
+    "mqtt-client",
+    "ocf-onboarding",
+    "update"
+  ],
+  "hiddenAppManifests": [
+    "/usr/palm/applications/amazon.alexa.view/appinfo.json",
+    "/media/system/apps/usr/palm/applications/com.webos.app.browser/appinfo.json",
+    "/mnt/otncabi/usr/palm/applications/com.webos.app.discovery/appinfo.json",
+    "/usr/palm/applications/com.webos.app.homeconnect/appinfo.json",
+    "/usr/palm/applications/com.webos.app.music/appinfo.json",
+    "/usr/palm/applications/com.webos.app.photovideo/appinfo.json",
+    "/usr/palm/applications/com.webos.app.roomconnect/appinfo.json",
+    "/usr/palm/applications/com.webos.app.sportsteamsettings/appinfo.json"
+  ],
+  "disabledPreloads": [
+    "netflix",
+    "youtube.leanback.v4",
+    "com.webos.app.browser",
+    "com.webos.app.voice",
+    "vudu",
+    "amazon",
+    "pooq",
+    "google.assistant",
+    "amazon.alexapr",
+    "airplay"
+  ],
+  "settings": {
+    "general": {
+      "homeAutoLaunch": "off",
+      "homePromotion": "off",
+      "sportsAlarm": "off",
+      "aiNudge": "off",
+      "screenSaverAd": "off",
+      "adCookie": "off",
+      "doNotSellMyPersonalInformation": "on",
+      "lmt": "on",
+      "voiceLongDistance": "off",
+      "welcomeFeature": "off",
+      "defaultApps": {
+        "home": "com.webos.app.fullhome"
+      },
+      "homeAutoLaunchMode": "full"
+    },
+    "option": {
+      "livePlus": "off",
+      "livePromotion": "off",
+      "webOSPromotionVideo": "off",
+      "watchedListCollection": "off",
+      "hbbTV": "off",
+      "hbbTvDnt": "on",
+      "hbbTvDeviceId": "off",
+      "googleAssistantTTS": "off",
+      "searchAppTTS": "off"
+    },
+    "support": {
+      "automaticUpdate": "off",
+      "softwareUpdateEnable": "false"
+    },
+    "network": {
+      "ipv6Enable": "false"
+    }
+  },
+  "coreUnits": [
+    "sam",
+    "surface-manager",
+    "audiooutputd",
+    "videooutputd",
+    "extinput-integration",
+    "arccontroller",
+    "connman"
+  ]
+}
