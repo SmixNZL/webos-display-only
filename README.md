@@ -22,6 +22,37 @@ It does not change picture calibration, HDMI/CEC/ARC configuration, audio settin
 
 The toolkit **does not uninstall apps**. Remove unwanted streaming apps through LG's native app editor first if you want the same minimal app row; see [setup](docs/SETUP.md). Homebrew Channel and LG's app-edit control remain available.
 
+## Paste into ChatGPT
+
+Copy the whole prompt below into a new ChatGPT conversation. It includes the repository link; you do not need to put your TV's address, credentials or other private details in the prompt.
+
+Direct control requires tools running on a computer that can reach your TV, with the necessary permissions. Pasting a prompt does not grant local access. The prompt asks the assistant to check what access it actually has and guide you when direct control is unavailable. See [OpenAI's access and approval documentation](https://learn.chatgpt.com/docs/agent-approvals-security).
+
+```text
+Help me use this project to clean up my own LG webOS TV:
+https://github.com/SmixNZL/webos-display-only
+
+My goal is to use the TV mainly as a screen for external HDMI devices, such as an Apple TV or games console. I want less LG advertising, tracking, unwanted apps and background activity while preserving picture, sound, HDMI switching, CEC/ARC, local maintenance access and the full-screen LG Home layout. I understand this is an early project and changes are at my own risk.
+
+Read the current README, compatibility, rooting, setup, recovery, privacy and validation guides, plus the relevant scripts, before proposing commands. If you cannot read the repository, say so and ask for the needed files instead of guessing their contents.
+
+First check what tools and local network access this session actually has. If you can operate on my computer, use authorized tools to do the work. If you cannot reach my TV or run local commands, explain that and guide me through the necessary steps. Never claim to have connected, paired, changed a setting or verified a result without evidence.
+
+Start with read-only discovery scoped to my TV. Identify its exact model, firmware, webOS/SDK version and existing root/Homebrew status. Ask which HDMI devices, TV apps, casting, voice and other features I use. Do not assume my setup matches the reference TV.
+
+Compare my TV with the current supported profiles and source-file checks. If it is unsupported or the checks fail, keep the work read-only and explain what independent investigation and validation would be needed. Do not force installation, edit identifiers to bypass checks, or assume rootability means cleanup compatibility.
+
+Show me a concrete cleanup plan and explain any features I would lose. Get explicit approval for rooting/persistent root, app deletion, firmware-update blocking and internet blocking before doing those things. Ask whether I want the TV's internet blocked while keeping local access. Do not change my router or unrelated devices. Once I approve a specific scope, complete that work without repeatedly asking for the same approval; ask again only for new scope or required permissions.
+
+Save originals and prepare a recovery route before changes. Use the project's audit, plan, apply, backup and status workflow for a supported TV. Explain the difference between hiding apps and uninstalling them. Keep the documented firmware, Home and core-service safeguards in place.
+
+Keep addresses, pairing/SSH keys, device/account identifiers, logs and backups in ignored private local storage. Do not ask me to paste secrets into chat or publish them in GitHub issues. Preserve SSH host-key verification and HTTPS verification. Use the rooting guide if needed, and do not leave default-password or unauthenticated remote access exposed.
+
+Verify settings and services, then check again after a full reboot. Test Home navigation, HDMI inputs, picture, sound, local control and any CEC/ARC features I use. If internet blocking was approved, verify public connections are blocked, local access remains available and the early startup guard ran. Report exactly what changed, what passed, what still needs checking and how to undo the cleanup. If a check fails, investigate and use the recovery path rather than stacking more changes.
+```
+
+The reference work was completed with ChatGPT. Claude or any other LLM may interpret this prompt differently, and another ChatGPT session may also produce different results. The prompt cannot expand the toolkit's compatibility or guarantee a successful cleanup.
+
 ## Rooting your TV
 
 Start with the [rooting guide](docs/ROOTING.md) if your TV is not rooted. It covers firmware checks, the SlopBro entry point used on the reference TV, Homebrew Channel, local pairing and private SSH access. Rooting changes the TV's boot/security behavior and is a separate decision from cleanup. Other firmware needs its own compatible method.
