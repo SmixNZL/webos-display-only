@@ -4,7 +4,7 @@ This repository was assembled as new source in a fresh Git repository, separatel
 
 The public compatibility profile contains only a model number, software versions, known system app/service names, documented IP range constants and firmware-file hashes. It excludes individual device identifiers, country/account settings, network details and captured TV files. Examples use an SSH alias, not a real address.
 
-The public repository owner's GitHub handle is necessarily visible. Commits use a project contributor name and a generic GitHub noreply email rather than a personal name/email.
+The public repository owner's GitHub handle is necessarily visible. Commits use that public handle and its ID-based GitHub noreply address rather than a personal name/email. The numeric account ID and handle are public GitHub metadata, not TV identifiers. Attribution was corrected from an initial shared generic identity at the owner's request.
 
 ## Local state
 

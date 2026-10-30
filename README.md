@@ -20,9 +20,13 @@ It does not change picture calibration, HDMI/CEC/ARC configuration, audio settin
 
 The toolkit **does not uninstall apps**. Remove unwanted streaming apps through LG's native app editor first if you want the same minimal app row; see [setup](docs/SETUP.md). Homebrew Channel and LG's app-edit control remain available.
 
+## Rooting your TV
+
+Start with the [rooting guide](docs/ROOTING.md) if your TV is not rooted. It covers firmware checks, the SlopBro entry point used on the reference TV, Homebrew Channel, local pairing and private SSH access. Rooting changes the TV's boot/security behavior and is a separate decision from cleanup. Other firmware needs its own compatible method.
+
 ## Quick start
 
-Requirements: an already rooted, supported TV with persistent **Homebrew Channel**, an owner-authorized root SSH connection, Python 3.9+ and OpenSSH on macOS or Linux (Windows users can use WSL). You must already have verified the TV's SSH host key. Rooting is firmware-specific: use the [webOSbrew rooting guide](https://www.webosbrew.org/rooting/) and [compatibility checker](https://cani.rootmy.tv/). This project does not acquire root or enable remote shells.
+Requirements: an already rooted, supported TV with persistent **Homebrew Channel**, an owner-authorized root SSH connection, Python 3.9+ and OpenSSH on macOS or Linux (Windows users can use WSL). You must already have verified the TV's SSH host key. Follow the [rooting guide](docs/ROOTING.md) to establish these prerequisites; the cleanup client does not acquire root or enable remote shells.
 
 Use an SSH config alias such as `my-tv` for your own TV. Keep addresses and keys in your private SSH configuration. The full process is in [setup](docs/SETUP.md).
 

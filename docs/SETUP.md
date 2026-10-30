@@ -6,7 +6,7 @@
 
 Check the model and software version in LG Settings. This toolkit currently supports only the exact combination in `profiles/lg-un81-webos5.json`.
 
-Follow the official [webOSbrew guidance](https://www.webosbrew.org/rooting/) for a rooting method compatible with your firmware. Install persistent Homebrew Channel from its official project. The reference setup used Homebrew Channel 0.7.3 and Node 8.12.0. Developer Mode by itself is insufficient.
+Follow this project's [rooting guide](ROOTING.md) for the firmware checks, reference SlopBro example, Homebrew installation and SSH prerequisites. It links to the upstream instructions and distinguishes the reference setup from unverified paths. The reference setup used Homebrew Channel 0.7.3 and Node 8.12.0. Developer Mode by itself is insufficient.
 
 Set up root SSH access on a network you trust, using your own key. Verify the TV's host fingerprint through a trusted channel before saving it. Configure an SSH alias named `my-tv` (or another name) with user `root`, your own private IPv4 hostname/address and your private identity file. Check that `ssh my-tv id` returns UID 0. Do not disable host-key verification or publish the SSH configuration.
 

@@ -16,9 +16,10 @@ ALLOWED_IPS = {'10.0.0.0', '172.16.0.0', '192.168.0.0', '169.254.0.0',
                '127.0.0.0', '127.0.0.1', '224.0.0.0', '255.255.255.255',
                '239.255.255.250', '1.1.1.1'}
 ALLOWED_EMAILS = {'noreply@users.noreply.github.com'}
+GITHUB_NOREPLY = re.compile(r'^\d+\+[A-Za-z0-9-]+@users\.noreply\.github\.com$', re.I)
 TEXT_SUFFIXES = {'.md', '.py', '.js', '.sh', '.json', '.yml', '.yaml'}
 PATTERNS = {
-    'private home path': re.compile(rb'/(?:Users|home)/[A-Za-z0-9_.-]+/(?!root\b)'),
+    'private home path': re.compile(rb'/(?:Users/[A-Za-z0-9_.-]+|home/(?!root(?:/|$))[A-Za-z0-9_.-]+)/'),
     'MAC address': re.compile(rb'(?i)(?<![0-9a-f])(?:[0-9a-f]{2}:){5}[0-9a-f]{2}(?![0-9a-f])'),
     'private key': re.compile(rb'-----BEGIN [A-Z ]*PRIVATE KEY-----'),
     'access token': re.compile(rb'(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{30,}|sk-[A-Za-z0-9_-]{24,})'),
@@ -54,7 +55,7 @@ def findings(path, data, deny=()):
             result.append('unapproved IP address')
             break
     for candidate in re.findall(rb'[A-Za-z0-9_.+%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', data):
-        if candidate.decode() not in ALLOWED_EMAILS:
+        if candidate.decode() not in ALLOWED_EMAILS and not GITHUB_NOREPLY.fullmatch(candidate.decode()):
             result.append('personal email address')
             break
     for candidate in re.findall(rb'(?<![0-9A-Za-z])(?:[0-9A-Fa-f]{0,4}:){2,}[0-9A-Fa-f]{0,4}(?![0-9A-Za-z])', data):

@@ -88,6 +88,12 @@ class PrivacyTests(unittest.TestCase):
         data = (' '.join(sorted(privacy.ALLOWED_IPS)) + ' noreply@users.noreply.github.com').encode()
         self.assertEqual(privacy.findings('example.md', data), [])
 
+    def test_public_github_identity_and_tv_system_home_are_allowed(self):
+        self.assertEqual(privacy.findings('example.md', b'12345+example@users.noreply.github.com'), [])
+        self.assertEqual(privacy.findings('example.md', b'/home/root/.ssh/authorized_keys'), [])
+        self.assertTrue(privacy.findings('example.md', b'/home/' + b'canary/private-file'))
+        self.assertTrue(privacy.findings('example.md', b'/home/' + b'root2/private-file'))
+
 
 if __name__ == '__main__':
     unittest.main()
