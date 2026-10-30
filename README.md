@@ -4,6 +4,8 @@ Make a rooted LG TV quieter and simpler when an Apple TV, PlayStation, Xbox or o
 
 **Use at your own risk. Root-level changes can break TV features, interrupt networking or leave the TV needing recovery. No warranty is provided.**
 
+**Completed with ChatGPT.** The reference TV cleanup and this toolkit were completed with ChatGPT. Claude or any other LLM may recommend different steps or produce different results, even from the same prompt. Review generated instructions and follow the documented compatibility checks, backups and verification steps. Using ChatGPT again does not guarantee the same outcome either.
+
 This is an early toolkit based on changes tested on **LG 65UN8160PVA, firmware 04.63.25, webOS/SDK 5.6.1**. The reference changes survived cold restarts and retained HDMI picture, audio and local control. The packaged installer has local automated tests; it has not yet been installed on a second, stock TV. Other models and firmware are unsupported. There is no force-compatibility switch.
 
 ## What it does
